@@ -3,6 +3,8 @@
 ## getAllBooks
 It shows all the books available in DB
 
+GET request
+
 req - `http://localhost:3000/getAllBooks`
 
 res - 
@@ -35,6 +37,8 @@ res -
 ## getBookbyID
 It shows the specific book by its ID
 
+GET request
+
 req - `http://localhost:3000/getBookbyId/1002`
 
 res - 
@@ -53,6 +57,8 @@ res -
 ## login
 It shows the user's details by the user's name
 
+GET request
+
 req - `http://localhost:3000/login/Akash`
 
 res -
@@ -69,6 +75,8 @@ res -
 
 ## register
 It stores the data in DB by giving the user's details
+
+POST request
 
 req - ```http://localhost:3000/register/```
 
@@ -92,6 +100,8 @@ res -
 ## removeBook
 It removes the books present in the user's collection of the specific user
 
+PATCH request
+
 req - `http://localhost:3000/removeBook/Ajay`
 
 res - 
@@ -106,6 +116,8 @@ book_id: null
 
 ## takeThisBook
 It updates the book field of the user whether it is not taken by any other user or else it shows an error
+
+GET request
 
 req - `http://localhost:3000/takeThisBook/Govind/1001`
 
