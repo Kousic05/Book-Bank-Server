@@ -9,18 +9,17 @@ router.get('/:username/:bookId',async (req,res)=>{
     // then return user doc as res
     try{
         const userpost = await Userpost.findOne({book_id: `${req.params.bookId}` });
-        const msg = "Book is not available";
-        if (userpost) {
-           if ((userpost.book_id != req.params.bookId)) {
-               const updatepost = await Userpost.updateOne({username: req.params.username},{$set:{book_id: `${req.params.bookId}`}});
-               res.json(updatepost);
-           } 
-        }
+        // if (userpost) {
+        //    if ((userpost.book_id != req.params.bookId)) {
+        //        const updatepost = await Userpost.updateOne({username: req.params.username},{$set:{book_id: `${req.params.bookId}`}});
+        //        res.json(updatepost);
+        //    } 
+        // }
         if ((userpost == null)) {
             const updatepost = await Userpost.updateOne({username: req.params.username},{$set:{book_id: `${req.params.bookId}`}});
             res.json(updatepost);
          } else {
-            res.json(msg);
+            res.sendStatus(405);
         }
     }catch(err){
         res.json({message: err});
