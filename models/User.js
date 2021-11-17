@@ -14,9 +14,10 @@ const userSchema = mongoose.Schema({
   },
 });
 
-const schema = new Schema(
+const schema = new mongoose.Schema(
   { name: String },
   { writeConcern: { w: "majority", j: true, wtimeout: 1000 } }
 );
 
 module.exports = mongoose.model("Users", userSchema);
+// module.exports = mongoose.model(schema);
