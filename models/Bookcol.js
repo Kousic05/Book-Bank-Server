@@ -15,6 +15,9 @@ const bookSchema = mongoose.Schema({
     book_auth:{
         type: String,
         required: false
+    },
+    book_year:{
+        type: Number
     }
 });
 
